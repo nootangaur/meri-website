@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,6 +122,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(255,255,255,0
 .form-group input,.form-group textarea{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:8px;padding:0.6rem 0.85rem;font-family:var(--ff);font-size:0.86rem;color:var(--ink);outline:none;transition:border-color 0.2s}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--blue)}
 .form-group textarea{resize:none;height:85px}
+.success-msg{display:none;background:var(--green-lt);border:1px solid #a7f3d0;color:var(--green);padding:0.75rem 1rem;border-radius:8px;font-size:0.85rem;font-weight:600;margin-bottom:1rem;text-align:center}
+.error-msg{display:none;background:#fef2f2;border:1px solid #fecaca;color:#dc2626;padding:0.75rem 1rem;border-radius:8px;font-size:0.85rem;font-weight:600;margin-bottom:1rem;text-align:center}
 footer{background:#0d0d0d;color:#6b7280;text-align:center;padding:1.75rem;font-size:0.8rem}
 footer span{color:#fff}
 </style>
@@ -145,19 +146,15 @@ footer span{color:#fff}
     <div class="hero-inner">
       <div>
         <div class="hero-tag"><i class="fa fa-circle"></i> Open to Opportunities</div>
-        <!-- ✏️ CHANGE: Apna naam yahan badlo -->
         <h1>Nootan Kumar<br><span class="blue">Gaur</span></h1>
-        <!-- ✏️ CHANGE: Apna short bio yahan badlo -->
         <p class="hero-desc">Data Analyst & Power BI Developer with 2+ years of experience building end-to-end BI solutions. Skilled in SQL, DAX, and automating data pipelines using n8n — turning raw data into actionable business insights.</p>
         <div class="hero-actions">
-          <!-- ✏️ CHANGE: href mein apne resume ka Google Drive link lagao -->
           <a class="btn-main" href="https://drive.google.com/file/d/1Z44Sei_rwdif1Q1iIBgy78nuMiv8DxvR/view?usp=sharing" target="_blank"><i class="fa fa-download"></i> Download Resume</a>
           <button class="btn-sec" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects →</button>
         </div>
       </div>
       <div class="avatar-card">
         <div class="avatar-circle">NK</div>
-        <!-- ✏️ CHANGE: Naam aur city -->
         <div class="avatar-name">Nootan Kumar Gaur</div>
         <div class="avatar-role">Data Analyst · Power BI Developer<br>Jaipur, India</div>
         <div class="avatar-stats">
@@ -167,7 +164,6 @@ footer span{color:#fff}
           <div class="astat"><div class="astat-num">40%</div><div class="astat-lbl">Accuracy ↑</div></div>
         </div>
         <div class="social-links">
-          <!-- ✏️ CHANGE: Apna email, LinkedIn, GitHub -->
           <a class="soc-btn" href="mailto:nootangaur111@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
           <a class="soc-btn" href="https://www.linkedin.com/in/nootan-kumar-gaur-47378a204" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a class="soc-btn" href="https://github.com/nootangaur" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -188,7 +184,6 @@ footer span{color:#fff}
   <div class="skills-cols">
     <div class="skill-group">
       <h4>Core Skills</h4>
-      <!-- ✏️ CHANGE: Percentage apni marzi se badlo -->
       <div class="skill-item"><div class="skill-top"><span class="skill-name">Power BI & DAX</span><span class="skill-pct">95%</span></div><div class="track"><div class="fill" style="width:95%"></div></div></div>
       <div class="skill-item"><div class="skill-top"><span class="skill-name">SQL</span><span class="skill-pct">90%</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div>
       <div class="skill-item"><div class="skill-top"><span class="skill-name">Excel & Google Sheets</span><span class="skill-pct">88%</span></div><div class="track"><div class="fill" style="width:88%"></div></div></div>
@@ -235,7 +230,6 @@ footer span{color:#fff}
   <div class="sec-title">Featured Projects</div>
   <div class="sec-sub">Real business problems solved with data & BI</div>
   <div class="projects-grid">
-    <!-- ✏️ CHANGE: Project title, description, chips, result badlo -->
     <div class="proj-card">
       <div class="proj-num">01</div>
       <div class="proj-title">Manufacturing Performance & Sales Analytics</div>
@@ -276,7 +270,6 @@ footer span{color:#fff}
   <div class="sec-title">Experience & Education</div>
   <div class="sec-sub">2+ years building data solutions across industries</div>
   <div class="exp-timeline">
-    <!-- ✏️ CHANGE: Job details, dates, points badlo -->
     <div class="exp-entry">
       <div class="exp-dot"></div>
       <div class="exp-header">
@@ -337,7 +330,6 @@ footer span{color:#fff}
       <h3>Let's connect!</h3>
       <p>I'm actively looking for Data Analyst and Power BI Developer opportunities. If you have a role or project that matches my profile, I'd love to hear from you.</p>
       <div class="contact-items">
-        <!-- ✏️ CHANGE: Apni contact details yahan -->
         <div class="c-item"><div class="c-icon"><i class="fa fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val">nootangaur111@gmail.com</div></div></div>
         <div class="c-item"><div class="c-icon"><i class="fa fa-phone"></i></div><div><div class="c-label">Phone</div><div class="c-val">+91 9636545594</div></div></div>
         <div class="c-item"><div class="c-icon"><i class="fab fa-linkedin-in"></i></div><div><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/NootanKumarGaur</div></div></div>
@@ -345,11 +337,26 @@ footer span{color:#fff}
         <div class="c-item"><div class="c-icon"><i class="fa fa-map-marker-alt"></i></div><div><div class="c-label">Location</div><div class="c-val">Jaipur, Rajasthan · Open to Remote</div></div></div>
       </div>
     </div>
-    <div class="https://script.google.com/macros/s/AKfycbz21Myit3_JOxno0iGx0-aAuMCD9D7A9qcHiTeZj7WQgjnmDxol7r_4UTcMyZ3vJ5hM/exec">
-      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Recruiter Name"></div>
-      <div class="form-group"><label>Company & Email</label><input type="email" placeholder="hr@company.com"></div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Hi Nootan! We'd like to discuss a Data Analyst role..."></textarea></div>
-      <a class="btn-main" href="mailto:nootangaur111@gmail.com?subject=Job Opportunity" style="width:100%;justify-content:center"><i class="fa fa-paper-plane"></i> Send Message</a>
+
+    <!-- CONTACT FORM - Google Sheets Connected -->
+    <div class="contact-form">
+      <div class="success-msg" id="successMsg">✅ Message bhej diya! Main jald hi reply karunga.</div>
+      <div class="error-msg" id="errorMsg">❌ Kuch error aaya. Dobara try karo.</div>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="fname" placeholder="Recruiter Name">
+      </div>
+      <div class="form-group">
+        <label>Company & Email</label>
+        <input type="email" id="femail" placeholder="hr@company.com">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="fmessage" placeholder="Hi Nootan! We'd like to discuss a Data Analyst role..."></textarea>
+      </div>
+      <button class="btn-main" id="submitBtn" onclick="sendMessage()" style="width:100%;justify-content:center">
+        <i class="fa fa-paper-plane"></i> Send Message
+      </button>
     </div>
   </div>
 </div>
@@ -358,6 +365,48 @@ footer span{color:#fff}
 <footer>
   Built with care · <span>Nootan Kumar Gaur</span> · Data Analyst & Power BI Developer · Jaipur, India
 </footer>
+
+<script>
+function sendMessage() {
+  var name = document.getElementById('fname').value.trim();
+  var email = document.getElementById('femail').value.trim();
+  var message = document.getElementById('fmessage').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Sabhi fields bharo!');
+    return;
+  }
+
+  var btn = document.getElementById('submitBtn');
+  btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Bhej raha hun...';
+  btn.disabled = true;
+
+  var formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('message', message);
+
+  fetch('https://script.google.com/macros/s/AKfycbzvfNaoiExhGpXRVYHr6qVHjQ3CPVRfDfcgdHpM1c_W97Zn-iGKGW1-dqS8rcuWEKGt/exec', {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(response) {
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('fname').value = '';
+    document.getElementById('femail').value = '';
+    document.getElementById('fmessage').value = '';
+    btn.innerHTML = '<i class="fa fa-paper-plane"></i> Send Message';
+    btn.disabled = false;
+  })
+  .catch(function(error) {
+    document.getElementById('errorMsg').style.display = 'block';
+    document.getElementById('successMsg').style.display = 'none';
+    btn.innerHTML = '<i class="fa fa-paper-plane"></i> Send Message';
+    btn.disabled = false;
+  });
+}
+</script>
 
 </body>
 </html>
