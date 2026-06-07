@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nootan Kumar Gaur | Data Analyst & Power BI Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0d0d0d;--ink2:#444;--ink3:#888;
+  --blue:#2563eb;--blue-lt:#eff6ff;--blue-md:#dbeafe;
+  --green:#059669;--green-lt:#ecfdf5;
+  --amber:#d97706;--amber-lt:#fffbeb;
+  --purple:#7c3aed;--purple-lt:#f5f3ff;
+  --border:#e5e7eb;--border2:#d1d5db;
+  --bg:#ffffff;--bg2:#f9fafb;--bg3:#f3f4f6;
+  --ff:'Bricolage Grotesque',sans-serif;--fs:'Lora',serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);background:var(--bg);color:var(--ink);line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 3rem;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--fs);font-size:1.25rem;color:var(--ink);font-style:italic}
+.logo span{color:var(--blue)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.78rem;color:var(--ink3);text-decoration:none;letter-spacing:0.07em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:color 0.2s}
+.nav-links a:hover{color:var(--blue)}
+.container{max-width:940px;margin:0 auto;padding:0 2rem}
+.hero{padding:110px 0 70px}
+.hero-inner{display:grid;grid-template-columns:1fr 320px;gap:3.5rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);background:var(--green-lt);padding:0.35rem 0.9rem;border-radius:100px;margin-bottom:1.25rem}
+.hero-tag i{font-size:0.6rem;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{font-family:var(--fs);font-size:2.9rem;line-height:1.12;margin-bottom:1.1rem;font-weight:600}
+.hero h1 .blue{color:var(--blue)}
+.hero-desc{color:var(--ink2);font-size:0.95rem;line-height:1.75;max-width:430px;margin-bottom:1.75rem}
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-main{background:var(--blue);color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:8px;font-family:var(--ff);font-size:0.86rem;font-weight:600;cursor:pointer;transition:background 0.2s;display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none}
+.btn-main:hover{background:#1d4ed8}
+.btn-sec{background:transparent;color:var(--ink);border:1.5px solid var(--border2);padding:0.7rem 1.5rem;border-radius:8px;font-family:var(--ff);font-size:0.86rem;font-weight:500;cursor:pointer;transition:border-color 0.2s,color 0.2s}
+.btn-sec:hover{border-color:var(--blue);color:var(--blue)}
+.avatar-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:1.75rem;text-align:center}
+.avatar-circle{width:82px;height:82px;border-radius:50%;background:var(--blue-md);border:3px solid #93c5fd;margin:0 auto 0.9rem;display:flex;align-items:center;justify-content:center;font-family:var(--fs);font-size:1.8rem;font-weight:600;color:var(--blue);font-style:italic}
+.avatar-name{font-size:1rem;font-weight:600;margin-bottom:0.15rem}
+.avatar-role{font-size:0.78rem;color:var(--ink3);margin-bottom:1.1rem;line-height:1.4}
+.avatar-stats{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem}
+.astat{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.6rem}
+.astat-num{font-family:var(--fs);font-size:1.3rem;color:var(--blue);font-style:italic}
+.astat-lbl{font-size:0.67rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em}
+.social-links{display:flex;justify-content:center;gap:0.5rem;margin-top:1.1rem}
+.soc-btn{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-size:0.88rem;cursor:pointer;transition:all 0.2s;text-decoration:none}
+.soc-btn:hover{border-color:var(--blue);color:var(--blue)}
+.sec-wrap{padding:65px 0}
+.divider{border-top:1px solid var(--border)}
+.alt{background:var(--bg2)}
+.sec-label{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:0.35rem}
+.sec-title{font-family:var(--fs);font-size:1.9rem;margin-bottom:0.4rem;font-style:italic}
+.sec-sub{color:var(--ink3);font-size:0.88rem;margin-bottom:2.25rem}
+.skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.skill-group h4{font-size:0.74rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.9rem;padding-bottom:0.45rem;border-bottom:1px solid var(--border)}
+.skill-item{display:flex;flex-direction:column;gap:0.28rem;margin-bottom:0.9rem}
+.skill-top{display:flex;justify-content:space-between;font-size:0.83rem}
+.skill-name{font-weight:500}
+.skill-pct{color:var(--ink3);font-size:0.75rem}
+.track{height:5px;background:var(--bg3);border-radius:100px;overflow:hidden}
+.fill{height:100%;border-radius:100px;background:var(--blue)}
+.fill.g{background:var(--green)}
+.fill.p{background:var(--purple)}
+.tech-grid{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem}
+.tech-tag{font-size:0.76rem;font-weight:500;padding:0.28rem 0.7rem;border-radius:100px;border:1px solid var(--border);color:var(--ink2);background:var(--bg)}
+.cert-row{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.5rem}
+.cert-badge{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.75rem;font-weight:600;padding:0.3rem 0.8rem;border-radius:8px}
+.cert-blue{background:var(--blue-lt);border:1px solid var(--blue-md);color:var(--blue)}
+.cert-amber{background:var(--amber-lt);border:1px solid #fcd34d;color:var(--amber)}
+.cert-green{background:var(--green-lt);border:1px solid #a7f3d0;color:var(--green)}
+.cert-purple{background:var(--purple-lt);border:1px solid #ddd6fe;color:var(--purple)}
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.proj-card{border:1px solid var(--border);border-radius:16px;padding:1.4rem;background:var(--bg);transition:box-shadow 0.2s,border-color 0.2s;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
+.proj-card.g::before{background:var(--green)}
+.proj-card.p::before{background:var(--purple)}
+.proj-card.a::before{background:var(--amber)}
+.proj-card:hover{box-shadow:0 6px 24px rgba(37,99,235,0.08);border-color:#bfdbfe}
+.proj-card.g:hover{border-color:#a7f3d0}
+.proj-num{font-family:var(--fs);font-size:2.2rem;color:var(--border);font-weight:600;font-style:italic;line-height:1;margin-bottom:0.65rem}
+.proj-title{font-size:0.97rem;font-weight:600;margin-bottom:0.5rem}
+.proj-desc{font-size:0.82rem;color:var(--ink2);line-height:1.65;margin-bottom:0.9rem}
+.proj-chips{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.85rem}
+.chip{font-size:0.7rem;font-weight:600;padding:0.18rem 0.6rem;border-radius:6px;background:var(--blue-md);color:var(--blue)}
+.chip.g{background:var(--green-lt);color:var(--green)}
+.chip.p{background:var(--purple-lt);color:var(--purple)}
+.chip.a{background:var(--amber-lt);color:var(--amber)}
+.proj-result{font-size:0.77rem;color:var(--ink3);display:flex;align-items:center;gap:0.4rem;font-weight:500}
+.proj-result i{color:var(--green)}
+.exp-timeline{position:relative;padding-left:2rem}
+.exp-timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.exp-entry{position:relative;margin-bottom:2.25rem}
+.exp-dot{position:absolute;left:-2.35rem;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2.5px solid var(--blue)}
+.exp-dot.green{border-color:var(--green)}
+.exp-dot.amber{border-color:var(--amber)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.55rem}
+.exp-role{font-size:0.97rem;font-weight:600}
+.exp-co{color:var(--blue);font-size:0.82rem;margin-top:0.1rem}
+.exp-co.green{color:var(--green)}
+.exp-co.amber{color:var(--amber)}
+.exp-date{font-size:0.72rem;color:var(--ink3);background:var(--bg3);padding:0.22rem 0.65rem;border-radius:100px;font-weight:500;white-space:nowrap}
+.exp-pts{list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:0.6rem}
+.exp-pts li{font-size:0.83rem;color:var(--ink2);padding-left:1rem;position:relative;line-height:1.55}
+.exp-pts li::before{content:'·';position:absolute;left:0.15rem;color:var(--blue);font-size:1.3rem;line-height:1.2}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.contact-info h3{font-family:var(--fs);font-size:1.35rem;font-style:italic;margin-bottom:0.65rem}
+.contact-info p{color:var(--ink2);font-size:0.87rem;line-height:1.7;margin-bottom:1.4rem}
+.contact-items{display:flex;flex-direction:column;gap:0.7rem}
+.c-item{display:flex;align-items:center;gap:0.8rem;font-size:0.85rem}
+.c-icon{width:36px;height:36px;border-radius:9px;background:var(--blue-lt);border:1px solid var(--blue-md);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:0.88rem;flex-shrink:0}
+.c-label{font-size:0.68rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.05rem}
+.c-val{color:var(--ink2);font-size:0.84rem}
+.contact-form{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.6rem}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:0.72rem;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.35rem}
+.form-group input,.form-group textarea{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:8px;padding:0.6rem 0.85rem;font-family:var(--ff);font-size:0.86rem;color:var(--ink);outline:none;transition:border-color 0.2s}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--blue)}
+.form-group textarea{resize:none;height:85px}
+footer{background:#0d0d0d;color:#6b7280;text-align:center;padding:1.75rem;font-size:0.8rem}
+footer span{color:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">nootan<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag"><i class="fa fa-circle"></i> Open to Opportunities</div>
+        <!-- ✏️ CHANGE: Apna naam yahan badlo -->
+        <h1>Nootan Kumar<br><span class="blue">Gaur</span></h1>
+        <!-- ✏️ CHANGE: Apna short bio yahan badlo -->
+        <p class="hero-desc">Data Analyst & Power BI Developer with 2+ years of experience building end-to-end BI solutions. Skilled in SQL, DAX, and automating data pipelines using n8n — turning raw data into actionable business insights.</p>
+        <div class="hero-actions">
+          <!-- ✏️ CHANGE: href mein apne resume ka Google Drive link lagao -->
+          <a class="btn-main" href="https://drive.google.com/file/d/1Z44Sei_rwdif1Q1iIBgy78nuMiv8DxvR/view?usp=sharing" target="_blank"><i class="fa fa-download"></i> Download Resume</a>
+          <button class="btn-sec" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects →</button>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <div class="avatar-circle">NK</div>
+        <!-- ✏️ CHANGE: Naam aur city -->
+        <div class="avatar-name">Nootan Kumar Gaur</div>
+        <div class="avatar-role">Data Analyst · Power BI Developer<br>Jaipur, India</div>
+        <div class="avatar-stats">
+          <div class="astat"><div class="astat-num">2+</div><div class="astat-lbl">Yrs Exp</div></div>
+          <div class="astat"><div class="astat-num">2</div><div class="astat-lbl">Companies</div></div>
+          <div class="astat"><div class="astat-num">5</div><div class="astat-lbl">Certs</div></div>
+          <div class="astat"><div class="astat-num">40%</div><div class="astat-lbl">Accuracy ↑</div></div>
+        </div>
+        <div class="social-links">
+          <!-- ✏️ CHANGE: Apna email, LinkedIn, GitHub -->
+          <a class="soc-btn" href="mailto:nootangaur111@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+          <a class="soc-btn" href="https://www.linkedin.com/in/nootan-kumar-gaur-47378a204" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a class="soc-btn" href="https://github.com/nootangaur" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a class="soc-btn" href="tel:+919636545594" title="Phone"><i class="fa fa-phone"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<div class="alt divider">
+<div class="container">
+<div class="sec-wrap" id="skills">
+  <div class="sec-label">What I Work With</div>
+  <div class="sec-title">Technical Skills</div>
+  <div class="sec-sub">Tools & technologies I use daily to deliver data solutions</div>
+  <div class="skills-cols">
+    <div class="skill-group">
+      <h4>Core Skills</h4>
+      <!-- ✏️ CHANGE: Percentage apni marzi se badlo -->
+      <div class="skill-item"><div class="skill-top"><span class="skill-name">Power BI & DAX</span><span class="skill-pct">95%</span></div><div class="track"><div class="fill" style="width:95%"></div></div></div>
+      <div class="skill-item"><div class="skill-top"><span class="skill-name">SQL</span><span class="skill-pct">90%</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div>
+      <div class="skill-item"><div class="skill-top"><span class="skill-name">Excel & Google Sheets</span><span class="skill-pct">88%</span></div><div class="track"><div class="fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><div class="skill-top"><span class="skill-name">Python (Pandas, NumPy)</span><span class="skill-pct">78%</span></div><div class="track"><div class="fill g" style="width:78%"></div></div></div>
+      <div class="skill-item"><div class="skill-top"><span class="skill-name">n8n Automation & ETL</span><span class="skill-pct">82%</span></div><div class="track"><div class="fill p" style="width:82%"></div></div></div>
+    </div>
+    <div class="skill-group">
+      <h4>BI & Visualization</h4>
+      <div class="tech-grid">
+        <span class="tech-tag">Power BI Desktop</span><span class="tech-tag">Power BI Service</span>
+        <span class="tech-tag">Power Query</span><span class="tech-tag">KPI Dashboards</span>
+        <span class="tech-tag">Data Modeling</span>
+      </div>
+      <h4>Data & Databases</h4>
+      <div class="tech-grid">
+        <span class="tech-tag">SQL Server</span><span class="tech-tag">Snowflake</span>
+        <span class="tech-tag">SAP</span><span class="tech-tag">BigQuery</span>
+      </div>
+      <h4>Automation & CRM</h4>
+      <div class="tech-grid">
+        <span class="tech-tag">n8n</span><span class="tech-tag">Zoho CRM</span>
+        <span class="tech-tag">ETL Pipelines</span><span class="tech-tag">Data Cleaning</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:2rem">
+    <h4 style="font-size:0.74rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.9rem;padding-bottom:0.45rem;border-bottom:1px solid var(--border)">Certifications</h4>
+    <div class="cert-row">
+      <span class="cert-blue"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
+      <span class="cert-amber"><i class="fa fa-database"></i> SQL Intermediate — HackerRank</span>
+      <span class="cert-green"><i class="fab fa-python"></i> Python — Grras Solutions</span>
+      <span class="cert-purple"><i class="fa fa-code"></i> C Programming — Cisco</span>
+      <span class="cert-blue"><i class="fa fa-cogs"></i> CAD — CIPET</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="container">
+<div class="sec-wrap" id="projects">
+  <div class="sec-label">My Work</div>
+  <div class="sec-title">Featured Projects</div>
+  <div class="sec-sub">Real business problems solved with data & BI</div>
+  <div class="projects-grid">
+    <!-- ✏️ CHANGE: Project title, description, chips, result badlo -->
+    <div class="proj-card">
+      <div class="proj-num">01</div>
+      <div class="proj-title">Manufacturing Performance & Sales Analytics</div>
+      <div class="proj-desc">Comprehensive Power BI dashboard monitoring production efficiency, equipment downtime, and defect rates. Integrated SQL Server and Excel data for real-time KPI tracking and decision-making.</div>
+      <div class="proj-chips"><span class="chip">Power BI</span><span class="chip">SQL Server</span><span class="chip">Excel</span><span class="chip">DAX</span></div>
+      <div class="proj-result"><i class="fa fa-arrow-trend-up"></i> Reduced analysis time by 4 hours · Real-time decisions enabled</div>
+    </div>
+    <div class="proj-card g">
+      <div class="proj-num">02</div>
+      <div class="proj-title">MECA 2.0 Sales Dashboard</div>
+      <div class="proj-desc">End-to-end sales performance dashboard tracking Revenue, Orders, Conversion Rate, and AOV. Dynamic DAX measures for target vs actual analysis with drill-down slicers.</div>
+      <div class="proj-chips"><span class="chip g">Power BI</span><span class="chip g">DAX</span><span class="chip g">Target Analysis</span></div>
+      <div class="proj-result"><i class="fa fa-arrow-trend-up"></i> Data-driven decisions via interactive KPI visuals</div>
+    </div>
+    <div class="proj-card p">
+      <div class="proj-num">03</div>
+      <div class="proj-title">Zoho CRM → Google Sheets Pipeline</div>
+      <div class="proj-desc">Automated end-to-end data pipeline using n8n to extract data from Zoho CRM and load into Google Sheets. Eliminated manual data entry and enabled daily fresh reporting.</div>
+      <div class="proj-chips"><span class="chip p">n8n</span><span class="chip p">Zoho CRM</span><span class="chip p">Google Sheets</span></div>
+      <div class="proj-result"><i class="fa fa-arrow-trend-up"></i> Fully automated · Zero manual reporting effort</div>
+    </div>
+    <div class="proj-card a">
+      <div class="proj-num">04</div>
+      <div class="proj-title">SAP + Snowflake ETL & BI Solution</div>
+      <div class="proj-desc">Built ETL pipelines integrating SAP, SQL, and Snowflake data for Power BI dashboards. Optimized DAX & SQL queries to automate reports and improve data accuracy.</div>
+      <div class="proj-chips"><span class="chip a">SAP</span><span class="chip a">Snowflake</span><span class="chip a">Power BI</span><span class="chip a">ETL</span></div>
+      <div class="proj-result"><i class="fa fa-arrow-trend-up"></i> 40% accuracy improvement · 4+ hrs/week saved</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="alt divider">
+<div class="container">
+<div class="sec-wrap" id="experience">
+  <div class="sec-label">My Journey</div>
+  <div class="sec-title">Experience & Education</div>
+  <div class="sec-sub">2+ years building data solutions across industries</div>
+  <div class="exp-timeline">
+    <!-- ✏️ CHANGE: Job details, dates, points badlo -->
+    <div class="exp-entry">
+      <div class="exp-dot"></div>
+      <div class="exp-header">
+        <div><div class="exp-role">Data Analyst</div><div class="exp-co">Navratan GemStones · Jaipur, India</div></div>
+        <div class="exp-date">Apr 2026 – Present</div>
+      </div>
+      <ul class="exp-pts">
+        <li>Automated data pipeline using n8n to extract from Zoho CRM and load into Google Sheets</li>
+        <li>Built interactive Power BI dashboards to track business KPIs end-to-end</li>
+        <li>Transformed and structured raw data for reliable reporting and analysis</li>
+        <li>Reduced manual reporting effort through full automation</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-dot green"></div>
+      <div class="exp-header">
+        <div><div class="exp-role">Associate Data Analyst</div><div class="exp-co green">PQube Business Solutions Pvt. Ltd · Bangalore</div></div>
+        <div class="exp-date">Aug 2023 – Apr 2025</div>
+      </div>
+      <ul class="exp-pts">
+        <li>Developed Power BI dashboards integrating SAP, SQL Server, and Snowflake data sources</li>
+        <li>Built ETL pipelines and data models improving data accuracy by 40%</li>
+        <li>Automated reports using DAX & SQL, saving 4+ hours every week</li>
+        <li>Performed sales & operational analysis to identify and resolve business inefficiencies</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-dot amber"></div>
+      <div class="exp-header">
+        <div><div class="exp-role">Data Engineer Intern</div><div class="exp-co amber">Celebal Technologies Pvt. Ltd · Jaipur</div></div>
+        <div class="exp-date">Jun 2022 – Jul 2022</div>
+      </div>
+      <ul class="exp-pts">
+        <li>Created and optimized SQL queries and Python scripts for data preprocessing</li>
+        <li>Worked with large datasets to support analytics and visualization projects</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-dot" style="border-color:var(--ink3)"></div>
+      <div class="exp-header">
+        <div><div class="exp-role">B.Tech — Computer Science</div><div class="exp-co" style="color:var(--ink3)">Arya College of Engineering & IT · Jaipur</div></div>
+        <div class="exp-date">2019 – 2023 · CGPA 7.47</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="container">
+<div class="sec-wrap" id="contact">
+  <div class="sec-label">Get In Touch</div>
+  <div class="sec-title">Contact Me</div>
+  <div class="sec-sub">Open to Data Analyst & Power BI Developer roles — full-time or freelance</div>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <h3>Let's connect!</h3>
+      <p>I'm actively looking for Data Analyst and Power BI Developer opportunities. If you have a role or project that matches my profile, I'd love to hear from you.</p>
+      <div class="contact-items">
+        <!-- ✏️ CHANGE: Apni contact details yahan -->
+        <div class="c-item"><div class="c-icon"><i class="fa fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val">nootangaur111@gmail.com</div></div></div>
+        <div class="c-item"><div class="c-icon"><i class="fa fa-phone"></i></div><div><div class="c-label">Phone</div><div class="c-val">+91 9636545594</div></div></div>
+        <div class="c-item"><div class="c-icon"><i class="fab fa-linkedin-in"></i></div><div><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/NootanKumarGaur</div></div></div>
+        <div class="c-item"><div class="c-icon"><i class="fab fa-github"></i></div><div><div class="c-label">GitHub</div><div class="c-val">github.com/nootangaur</div></div></div>
+        <div class="c-item"><div class="c-icon"><i class="fa fa-map-marker-alt"></i></div><div><div class="c-label">Location</div><div class="c-val">Jaipur, Rajasthan · Open to Remote</div></div></div>
+      </div>
+    </div>
+    <div class="https://script.google.com/macros/s/AKfycbz21Myit3_JOxno0iGx0-aAuMCD9D7A9qcHiTeZj7WQgjnmDxol7r_4UTcMyZ3vJ5hM/exec">
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Recruiter Name"></div>
+      <div class="form-group"><label>Company & Email</label><input type="email" placeholder="hr@company.com"></div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Hi Nootan! We'd like to discuss a Data Analyst role..."></textarea></div>
+      <a class="btn-main" href="mailto:nootangaur111@gmail.com?subject=Job Opportunity" style="width:100%;justify-content:center"><i class="fa fa-paper-plane"></i> Send Message</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>
+  Built with care · <span>Nootan Kumar Gaur</span> · Data Analyst & Power BI Developer · Jaipur, India
+</footer>
+
+</body>
+</html>
